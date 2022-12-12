@@ -1,0 +1,9 @@
+<div class="btn-group" role="group" aria-label="Basic outlined example">
+    <button 
+        *ngFor="let button of options"
+        (click) = "filtroSelecionado($event, button)"
+        type="button"
+        class="btn btn-outline-primary">{{ button | titlecase }} {{filtroId}}</button>
+</div>
+<h1>{{filtroId}}</h1>
+

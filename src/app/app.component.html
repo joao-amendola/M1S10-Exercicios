@@ -1,0 +1,25 @@
+<div class="container">
+    <ntap-header></ntap-header>
+</div>
+<br><br><br><br>
+<div class="container">
+    <ntap-filter></ntap-filter>
+    <router-outlet></router-outlet>
+</div>
+
+<ntap-footer></ntap-footer>
+
+<!-- Kelvis Rodrigues19:51
+{
+    path: 'home/:status',
+    component: HomeComponent
+  },
+Kelvis Rodrigues20:17
+{
+        path: 'todos',
+        component: AboutComponent,
+        data: { status: 'todos' }
+      },
+this.route.data.subscribe((data) => {
+      console.log('Dados: ', data);
+    }); -->
