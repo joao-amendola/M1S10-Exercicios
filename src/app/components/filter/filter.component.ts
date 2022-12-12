@@ -37,12 +37,25 @@ export class FilterComponent implements OnInit {
     this.route.paramMap.subscribe((data) => {
       this.id = data.get('id')
     })
-
+    
     this.notificacoesFiltradas = NOTIFICATIONS_MOCK
   }
 
   filtroSelecionado(event:any, filtroClicado:string) {
     this.filtrarNotificacoes.emit(filtroClicado)
     this.router.navigate(['/home', filtroClicado])
+    if (filtroClicado == "lidos"){
+      console.log("Lidos");
+      this.notificacoesFiltradas = this.notificacoesFiltradas.filter((element) => element.lido == true)
+      console.log(this.notificacoesFiltradas)
+    }
+    else if (filtroClicado == "nao-lidos"){
+      console.log("Não lidos");
+      
+    }
+    else {
+      console.log("Todos")
+    }
+
   }
 }
